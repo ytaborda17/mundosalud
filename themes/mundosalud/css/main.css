@@ -1,0 +1,512 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body { height: 100%; }
+body {
+	color: #000;
+	font: normal 12px "Century Gothic",Arial,Helvetica,sans-serif;
+}
+a, img{
+	border: none;
+}
+#page {
+	min-height        : 100%;
+	width             : 950px;
+	display           : block;
+	margin            : auto;
+	margin-bottom     : -194px;
+	position          : relative;
+	background        : #fff;
+	-webkit-box-shadow: 0px 0px 60px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow   : 0px 0px 60px 5px rgba(0,0,0,0.75);
+	box-shadow        : 0px 0px 60px 5px rgba(0,0,0,0.75);
+}
+#wrap { min-height: 100%; }
+#main {
+	overflow:auto;
+	padding-bottom: 194px; /* must be same height as the footer */
+}  
+#footer {
+	width     : 950px;
+	height    : 194px;
+	position  : relative;
+	margin    : auto;
+	margin-top: -194px;
+	display   : block;
+	clear     : both;
+	font-size : 1em;
+	border    : 0;
+	color     : #fff;
+	background: url('../img/footNetwork.png') no-repeat;
+	z-index   : 99;
+}
+body:before { /*Opera Fix*/
+	content   :"";
+	height    :100%;
+	float     :left;
+	width     :0;
+	margin-top:-32767px;/
+}
+/* Fin sticky footer*/
+
+.footNetwork {
+	width     : 100%;
+	height    : 150px;
+	display   : block;
+	text-align: center;
+}
+.footNetwork a {
+	height : 40px;
+	width  : 40px;
+	display:inline-block;
+	margin : 60px 5px 0 5px;
+}
+.footAddress {
+	width      : 100%;
+	height     : 44px;
+	line-height: 44px;
+	text-align : center;
+	display    : block;
+}
+#header {
+	width     : 100%;
+	height    : 164px;
+	display   : block;
+	clear     : both
+	margin    : 0;
+	padding   : 0;
+	background: url('../img/header.jpg') no-repeat;
+	position  : relative;
+}
+#logo {
+	width     : 392px;
+	height    : 72px;
+	display   : block;
+	position  : absolute;
+	top       : 60px;
+	left      : 30px;
+	background: url('../img/logo_empresa.png') no-repeat;
+}
+#logoSpa,#logoMed,#logoOdo {
+	width     : 191px;
+	height    : 76px;
+	display   : none;
+	position  : absolute;
+	top       : 70px;
+	right     : 30px;
+}
+#logoSpa { background: url('../img/logoSpa.png') no-repeat;	}
+#logoMed { background: url('../img/logoMedCasa.png') no-repeat; }
+#logoOdo { 
+	background: url('../img/logoOdo.png') no-repeat; 
+	background-size: 100%;
+	margin-top: 20px;
+}
+a, a:link, a:visited { 
+	color: #812780; 
+	text-decoration: none; 
+}
+p.justify {
+	text-align: justify;
+   text-justify: inter-word;
+}
+h1,h2,h3,h4 { color: #80388D; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+.invisible, .hidden { display: none; }
+.bgFix {
+	width     : 100%;
+	height    : 100%;
+	display   : block;
+	background: url('../img/fondos/1600x1200.jpg') center center no-repeat fixed;
+	position  : fixed;
+	top       :0px; 
+	left      :0px;
+	z-index   : -1;
+	background-size:100%;
+	-webkit-background-size: cover;
+	-moz-background-size   : cover;
+	-o-background-size     : cover;
+	background-size        : cover;
+}
+/*@media all and (min-width:  800px) and (max-width: 1280px) { .bgFix { background-image: url('../img/fondos/1280x890.jpg'); } }
+@media all and (min-width: 1280px) and (max-width: 1400px) { .bgFix { background-image: url('../img/fondos/1400x900.jpg'); } }
+@media all and (min-width: 1400px) and (max-width: 1600px) { .bgFix { background-image: url('../img/fondos/1600x1200.jpg'); } }*/
+
+#mainContent { 
+	background: #fff; 
+	z-index: 5;
+}
+#content { padding: 20px 10px; }
+
+div#mainMenu {
+	background-color: #812780;
+	height: 43px;
+	text-align: right;
+}
+
+div#mainMenu > ul {
+	list-style      :none;
+	width           : 100%;
+	height          : 100%;
+	margin          : 0;
+	padding         : 0;
+	background-color: #812780;
+	display         : inline;
+	text-align: left;
+}
+	
+div#mainMenu > ul > li {
+	display    : inline-block;
+	position   : relative;
+	font-size  : 13px;
+	line-height: 13px;
+}
+div#mainMenu ul li.active { background: #BA1780; }
+
+div#mainMenu > ul > li.filler {
+	height: 100%;
+	max-height: 1000px;
+}
+div#mainMenu ul li a {
+	color:#fff;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+}
+div#mainMenu ul li a:hover {
+	background-color: #BA1780;
+	color:#fff;
+}
+
+div#mainMenu ul li ul {
+	background-color: #812780;
+	position:absolute;
+	width:200px;
+	z-index: 990;
+	display: none;
+}
+div#mainMenu ul li:hover ul {
+	display: block;
+}
+div#mainMenu ul li ul li a{
+	min-width:170px;
+}
+div#mainMenu ul li ul li {
+	width:200px;
+	white-space: normal;
+	list-style: none;
+	font-size: 0.8em;
+	line-height: 1em;
+}
+div#mainMenu ul li ul li a {
+	padding: 8px 10px;
+}
+
+div.horizontalCenter {
+	width         : 100%;
+	height        : auto;
+	display       : block;
+	vertical-align: middle;
+	text-align    : center;
+	margin: auto;
+}
+.line-15 { line-height: 30px; }
+span.direccion { 
+	height: 13px;
+	width: 14px;
+	display: inline-block;
+	background: url('../img/iconDir.png') no-repeat;
+	margin-right: 5px;
+}
+span.telefono { 
+	height: 15px;
+	width: 13px;
+	display: inline-block;
+	background: url('../img/iconPhone.png') no-repeat;
+	margin-right: 5px;
+}
+.mar120{ margin: 0 120px; }
+.mar80{ margin: 0 80px; }
+.mar40{ margin: 0 40px; }
+.colMor { color: #80388D; }
+.colFuc { color: #BF2376; }
+.marle40 { 
+	line-height: 16px;
+	width: 67%;
+	display: block;
+	float: right;
+}
+.span45{
+	display: table-cell;
+	width: 45%;
+	padding-left:30px;
+}
+.span50{
+	width  : 50%;
+	display: block;
+	float  : left;
+}
+.enfasis {
+	line-height: 16px;
+	padding    : 10px 15px;
+	background : #bf2376;
+	color      : #fff;
+	font-size  : 1.1em;
+}
+.noSlct {
+	-webkit-touch-callout: none;
+	-webkit-user-select  : none;
+	-khtml-user-select   : none;
+	-moz-user-select     : none;
+	-ms-user-select      : none;
+	user-select          : none;
+	cursor: default;
+}
+
+/* site/quienes_somos */
+.column23{
+	width     : 950px;
+	height    : 550px;
+	display   :block;
+	position  : relative;
+	z-index: 10;
+	background-color: #F5E8F1;
+	background: url('../img/fondoQuienes.jpg') no-repeat;
+}
+.logoMedCasa,.logoSpa {
+	width: 191px;
+	height: 76px;
+	display:block;
+	background-size: 100%;
+}
+.logoMedCasa { background: url('../img/logoMedCasa.png') no-repeat; }
+.logoSpa { background: url('../img/logoSpa.png') no-repeat; }
+.ladyFlower {
+	width            : 471px;
+	height           : 587px;
+	background       : url('../img/mujerQuienes.png') no-repeat;
+	display          : block;
+	position         : absolute;	
+	top              : 0; 
+	left             : 0;
+	z-index          : 20;
+	-webkit-animation: fadein 7s; /* Safari and Chrome */
+	-moz-animation   : fadein 7s; /* Firefox */
+	-ms-animation    : fadein 7s; /* Internet Explorer */
+	-o-animation     : fadein 7s; /* Opera */
+	animation        : fadein 7s;
+}
+.ondasFlower{
+	width            : 950px;
+	height           : 279px;
+	background       : url('../img/ondasQuienes.png') no-repeat;
+	display          : block;
+	position         : absolute;	
+	top:             : 0px; 
+	left             : 0px;
+	margin-top       : 400px;
+	z-index          : 30;
+	-webkit-animation: fadein 3s; /* Safari and Chrome */
+	-moz-animation   : fadein 3s; /* Firefox */
+	-ms-animation    : fadein 3s; /* Internet Explorer */
+	-o-animation     : fadein 3s; /* Opera */
+	animation        : fadein 3s;	
+}
+@keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+@-moz-keyframes fadein { /* Firefox < 16 */
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {/* Safari, Chrome and Opera > 12.1 */
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+@-ms-keyframes fadein { /* Internet Explorer */
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+@-o-keyframes fadein { /* Opera < 12.1 */
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+.goForward{
+	position: relative;
+	z-index: 99;
+}
+/* site/index */
+.column1 .enfasis {
+	display : inline-block;
+	width   : 52%;
+	position: relative;
+	top     : -18px;
+	z-index : 99;
+}
+.column1 {
+	width  : 258px;
+	height : 100%;
+	padding: 0 10px 10px 10px;
+	display: block;
+	float  : left;
+	text-align: center;
+}
+.column2 {
+	width  :672px;
+	display: block;
+	float  :right;
+	margin-right: -10px;
+}
+.column2 #content { padding-top: 10px }
+.nav span {
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	color: transparent;
+	margin: -10px 3px;
+	background: #dadada;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(/pie.htc);
+}
+.nav, .nav span:hover, .nav span.cycle-pager-active { background: #BA1780; }
+.nav li{
+	list-style-type:none;
+	display: inline;
+}
+.rotar-promos, .rotar-promos img {
+	width: 258px;
+	height: 363px;
+}
+.rotar-promos {
+	overflow:hidden;
+	-webkit-box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow   : 4px 4px 15px 0px rgba(0,0,0,0.4);
+	box-shadow        : 4px 4px 15px 0px rgba(0,0,0,0.4);
+}
+div[class^='rotardor-'] { overflow:hidden; }
+.column1 .logoMedCasa, .column1 .logoSpa {
+	width: 122px;
+	height: 54px;
+	margin-top: 20px;
+	background-size: 100%;
+}
+.rotador-principal, .rotador-principal img{
+	width: 652px;
+	height: 334px;
+	overflow: hidden;
+}
+.rotador-extra, .rotador-extra  img {
+	width: 784px;
+	height: 390px;
+}
+.rotador-extra {
+	margin:auto;
+	margin-top:40px;
+	overflow: hidden;
+}
+.links-principal {
+	text-align: center;
+	display: block;
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.links-principal, .links-principal img {
+	width: 160px;
+	height: 116px;
+}
+.links-principal span {
+	display: block;
+	margin: 5px auto;
+}
+.links-principal:hover span {
+	font-weight: bold;
+}
+.globo-principal {
+	width: 188px;
+	height: 201px;
+	display: block;
+	position: absolute;
+	z-index: 999;
+	top: 530px;
+	right: -35px;
+	background: url('../img/globoPrincipal.png');
+	background-size: 188px 201px;
+}
+/* site/tratamientos */
+.rotar-tratamiento, .rotar-tratamiento img {
+	width: 770px;
+	height: 385px;
+	overflow:hidden;
+}
+.globoAfiliate {
+	width: 202px;
+	height: 211px;
+	display: block;
+	background: url('../img/globoAfiliate.png');
+	float: left;
+}
+.afiliateSpa { background: url('../img/afiliateSpa.png'); }
+.afiliateMed { background: url('../img/afiliateMed.png'); }
+.afiliateOdo { background: url('../img/afiliateOdo.png'); }
+.tratamientoDesc {
+	width: 500px;
+	display: block;
+	float: right;
+	font-size: 1.1em;
+	line-height: 18px;
+	margin-bottom: 50px;
+}
+.tratamientoDesc ul {
+	margin-left:20px;
+	margin-top: 10px;
+}
+/* site/planes */
+.tablePlan{
+	background: #eacacd;
+	border-collapse: collapse; 
+	border:none; 
+}
+.tablePlan td { vertical-align: middle; }
+.tablePlan td b { 
+	padding       : 10px; 
+	display       : block;
+	display       :block;
+	widht         :100%;
+	height        :auto;
+	clear         :both;
+	vertical-align:middle;
+	/*border-bottom :1px solid #961a7c;*/
+}
+.tablePlan td:first-child { border-right: 1px solid #961a7c; }
+
+/* site/contacto */
+.contactBanner {
+	width: 950px;
+	height: 180px;
+	display: block;
+	background: url('../img/contactBanner.jpg');
+	background-size: 100%;
+	margin: -20px -10px 0 -10px;
+}
+.contactBanner+div {
+	width: 950px;
+	height: 5px;
+	display: block;
+	margin: 0 -10px 20px -10px;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0.81) 0%, rgba(191,191,191,0.81) 25%, rgba(181,181,181,0.81) 29%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.81)), color-stop(25%,rgba(191,191,191,0.81)), color-stop(29%,rgba(181,181,181,0.81)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0.81) 0%,rgba(191,191,191,0.81) 25%,rgba(181,181,181,0.81) 29%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,255,255,0.81) 0%,rgba(191,191,191,0.81) 25%,rgba(181,181,181,0.81) 29%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,255,255,0.81) 0%,rgba(191,191,191,0.81) 25%,rgba(181,181,181,0.81) 29%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,255,255,0.81) 0%,rgba(191,191,191,0.81) 25%,rgba(181,181,181,0.81) 29%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfffffff', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+	border-bottom: 14px solid #812780;
+}
